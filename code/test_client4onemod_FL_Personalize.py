@@ -258,10 +258,9 @@ def Inference(FLAGS):
     cudnn.deterministic = True
     net = net_factory(FLAGS,net_type=FLAGS.model, in_chns=FLAGS.in_chns,
                       class_num=FLAGS.num_classes)
+
     save_mode_path = os.path.join(
-        snapshot_path, '{}_async_{}_best_model.pth'.format(FLAGS.client,FLAGS.model).replace("client","client_"))
-    # save_mode_path = os.path.join(
-    #     snapshot_path, '{}/{}_best_model.pth'.format(FLAGS.client,FLAGS.model))
+        snapshot_path, '{}_{}_best_model.pth'.format(FLAGS.client,FLAGS.model).replace("client","client_"))
     net.load_state_dict(torch.load(save_mode_path))
     print("init weight from {}".format(save_mode_path))
     net.eval()
