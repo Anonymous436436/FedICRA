@@ -10,7 +10,6 @@ import torch
 import torch.nn as nn
 from torch.distributions.uniform import Uniform
 
-
 class ConvBlock(nn.Module):
     """two convolution layers with batch norm and leaky relu"""
 
