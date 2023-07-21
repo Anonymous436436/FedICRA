@@ -30,3 +30,4 @@ def net_factory(args, net_type="unet", in_chns=1, class_num=3):
     else:
         net = None
     return net
+
