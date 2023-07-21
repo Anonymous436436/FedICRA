@@ -7,7 +7,6 @@ import torch.nn as nn
 import matplotlib.pyplot as plt
 from skimage import measure
 
-
 def recursive_glob(rootdir='.', suffix=''):
     """Performs recursive glob with given suffix and rootdir
         :param rootdir is the root directory
