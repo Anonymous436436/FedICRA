@@ -13,6 +13,7 @@ from scipy.ndimage.interpolation import zoom
 from torch.utils.data import Dataset
 from torch.utils.data.sampler import Sampler
 
+
 def pseudo_label_generator_acdc(data, seed, beta=50.00, mode='bf', img_class='odoc'):
     from skimage.exposure import rescale_intensity
     from skimage.segmentation import random_walker
